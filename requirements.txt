@@ -1,0 +1,8 @@
+groq
+twilio
+deepgram-sdk
+flask
+flask-sockets
+websocket-client
+requests
+python-dotenv
