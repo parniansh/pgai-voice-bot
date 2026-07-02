@@ -1,75 +1,61 @@
 """
 caller.py - Handles outbound calls via Twilio and manages the media stream.
-
-Flow:
-1. Make outbound call via Twilio REST API
-2. Twilio hits our Flask webhook when call connects
-3. We open a media stream to receive/send audio
-4. Incoming audio is passed to transcriber
-5. Patient responses (text) are spoken back via Twilio TTS
 """
 
 import os
-import json
+import time
 import threading
 from flask import Flask, request, Response
 from twilio.rest import Client
-from twilio.twiml.voice_response import VoiceResponse, Connect, Stream, Say
-import websocket
+from twilio.twiml.voice_response import VoiceResponse, Connect, Stream
 
 app = Flask(__name__)
 
-# Twilio credentials from environment
 TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID")
 TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
 TWILIO_PHONE_NUMBER = os.environ.get("TWILIO_PHONE_NUMBER")
-NGROK_URL = os.environ.get("NGROK_URL")  # e.g. https://abc123.ngrok.io
+NGROK_URL = os.environ.get("NGROK_URL")
 
-TARGET_NUMBER = "+18054398008"  # Pretty Good AI test number
+TARGET_NUMBER = "+18054398008"
 
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-# Will be set by main.py before making a call
-current_scenario = None
-on_transcription_callback = None  # called when agent speech is transcribed
-on_call_ended_callback = None     # called when call ends
+on_call_ended_callback = None
+on_recording_ready_callback = None
+current_call_sid = None
 
 
 def make_call():
-    """Initiate an outbound call to the test number."""
+    global current_call_sid
     call = twilio_client.calls.create(
         to=TARGET_NUMBER,
         from_=TWILIO_PHONE_NUMBER,
-        url=f"{NGROK_URL}/call-connected",  # Twilio hits this when call connects
+        url=f"{NGROK_URL}/call-connected",
         status_callback=f"{NGROK_URL}/call-ended",
         status_callback_event=["completed"],
-        record=True,  # record the full call
+        record=True,
         recording_status_callback=f"{NGROK_URL}/recording-ready",
     )
+    current_call_sid = call.sid
     print(f"[caller] Call initiated: {call.sid}")
     return call.sid
 
 
 @app.route("/call-connected", methods=["POST"])
 def call_connected():
-    """
-    Twilio hits this when the call connects.
-    We respond with TwiML to open a media stream.
-    """
+    """Twilio hits this when call connects — open a media stream."""
     response = VoiceResponse()
-
-    # Open a WebSocket media stream — this gives us real-time audio
     connect = Connect()
-    stream = Stream(url=f"wss://{NGROK_URL.replace('https://', '')}/media-stream")
+    # Use wss:// for the media stream WebSocket
+    stream = Stream(url=f"{NGROK_URL.replace('https://', 'wss://')}/media-stream")
     connect.append(stream)
     response.append(connect)
-
+    print("[caller] Call connected, opening media stream")
     return Response(str(response), mimetype="text/xml")
 
 
 @app.route("/call-ended", methods=["POST"])
 def call_ended():
-    """Twilio hits this when the call ends."""
     print("[caller] Call ended")
     if on_call_ended_callback:
         on_call_ended_callback()
@@ -78,33 +64,39 @@ def call_ended():
 
 @app.route("/recording-ready", methods=["POST"])
 def recording_ready():
-    """Twilio hits this when the recording is available."""
     recording_url = request.form.get("RecordingUrl")
-    recording_sid = request.form.get("RecordingSid")
     print(f"[caller] Recording ready: {recording_url}")
-    # Storage module will download this
+    if on_recording_ready_callback:
+        on_recording_ready_callback(recording_url)
     return Response("", status=200)
 
 
 def speak(call_sid, text):
-    """
-    Inject patient speech into the live call.
-    Uses Twilio's TTS to speak the given text.
-    Note: ElevenLabs can replace this later for better voice quality.
-    """
-    twilio_client.calls(call_sid).update(
-        twiml=f"<Response><Say voice='Polly.Joanna'>{text}</Say></Response>"
-    )
-    print(f"[caller] Speaking: {text}")
+    """Inject patient speech into the live call via Twilio TTS."""
+    try:
+        t0 = time.perf_counter()
+        twilio_client.calls(call_sid).update(
+            twiml=f"<Response><Say voice='Polly.Joanna'>{text}</Say><Redirect>{NGROK_URL}/call-connected</Redirect></Response>"
+        )
+        print(f"[caller] Twilio TTS delivered in {time.perf_counter() - t0:.2f}s")
+        print(f"[caller] Speaking: {text}")
+    except Exception as e:
+        print(f"[caller] Error speaking: {e}")
 
 
-def run_server():
-    """Run the Flask webhook server in a background thread."""
-    app.run(host="0.0.0.0", port=5000, debug=False, use_reloader=False)
+def end_call(call_sid):
+    try:
+        twilio_client.calls(call_sid).update(status="completed")
+        print(f"[caller] Ended call {call_sid}")
+    except Exception as e:
+        print(f"[caller] Error ending call: {e}")
 
 
 def start():
-    """Start the Flask server in background and return."""
-    thread = threading.Thread(target=run_server, daemon=True)
+    """Start Flask server with WebSocket support via flask-sock."""
+    thread = threading.Thread(
+        target=lambda: app.run(host="0.0.0.0", port=5000, debug=False),
+        daemon=True,
+    )
     thread.start()
     print("[caller] Webhook server running on port 5000")

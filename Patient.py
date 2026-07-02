@@ -57,7 +57,7 @@ class PatientSimulator:
         })
 
         response = client.chat.completions.create(
-            model="llama3-70b-8192",
+            model="openai/gpt-oss-120b",
             max_tokens=200,
             messages=[
                 {"role": "system", "content": self.system_prompt},
@@ -82,27 +82,6 @@ class PatientSimulator:
         print(f"[patient] Response: {patient_reply}")
         return patient_reply, should_end
 
-    def get_opening_line(self):
-        """Generate the patient's first line when the agent picks up."""
-        opening_prompt = "The phone was just answered by the practice's AI assistant. They said a brief greeting. Start the conversation as your character would."
-
-        response = client.chat.completions.create(
-            model="llama3-70b-8192",
-            max_tokens=100,
-            messages=[
-                {"role": "system", "content": self.system_prompt},
-                {"role": "user", "content": opening_prompt},
-            ],
-        )
-
-        opening_line = response.choices[0].message.content.strip()
-        opening_line = opening_line.replace("[END CALL]", "").strip()
-
-        self.conversation_history.append({"role": "user", "content": opening_prompt})
-        self.conversation_history.append({"role": "assistant", "content": opening_line})
-
-        print(f"[patient] Opening line: {opening_line}")
-        return opening_line
 
     def reset(self):
         """Reset state for a new call."""

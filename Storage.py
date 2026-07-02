@@ -40,12 +40,12 @@ def save_transcript(scenario_id, transcript):
 
     # JSON version
     json_path = os.path.join(call_dir, "transcript.json")
-    with open(json_path, "w") as f:
+    with open(json_path, "w", encoding="utf-8") as f:
         json.dump(transcript, f, indent=2)
 
     # Human readable version
     txt_path = os.path.join(call_dir, "transcript.txt")
-    with open(txt_path, "w") as f:
+    with open(txt_path, "w", encoding="utf-8") as f:
         for turn in transcript:
             speaker = turn["speaker"].upper().ljust(10)
             f.write(f"{speaker}: {turn['text']}\n")
@@ -57,7 +57,7 @@ def save_transcript(scenario_id, transcript):
 def save_report(call_dir, report):
     """Save QA analysis report as JSON."""
     report_path = os.path.join(call_dir, "report.json")
-    with open(report_path, "w") as f:
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
     print(f"[storage] Report saved to {report_path}")
 

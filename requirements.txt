@@ -2,7 +2,8 @@ groq
 twilio
 deepgram-sdk
 flask
-flask-sockets
+flask-sock
+gevent
 websocket-client
 requests
 python-dotenv
