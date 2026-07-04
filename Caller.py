@@ -1,15 +1,17 @@
 """
-caller.py - Handles outbound calls via Twilio and manages the media stream.
+caller.py - Handles outbound calls via Twilio using Conversation Relay.
 """
 
 import os
-import time
+import json
 import threading
 from flask import Flask, request, Response
+from flask_sock import Sock
 from twilio.rest import Client
-from twilio.twiml.voice_response import VoiceResponse, Connect, Stream
+from twilio.twiml.voice_response import VoiceResponse, Connect
 
 app = Flask(__name__)
+sock = Sock(app)
 
 TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID")
 TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
@@ -22,11 +24,15 @@ twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
 on_call_ended_callback = None
 on_recording_ready_callback = None
-current_call_sid = None
+active_ws = None
 
+
+
+@app.route('/health', methods=['GET'])
+def health():
+    return Response('ok', status=200)
 
 def make_call():
-    global current_call_sid
     call = twilio_client.calls.create(
         to=TARGET_NUMBER,
         from_=TWILIO_PHONE_NUMBER,
@@ -36,21 +42,23 @@ def make_call():
         record=True,
         recording_status_callback=f"{NGROK_URL}/recording-ready",
     )
-    current_call_sid = call.sid
     print(f"[caller] Call initiated: {call.sid}")
     return call.sid
 
 
 @app.route("/call-connected", methods=["POST"])
 def call_connected():
-    """Twilio hits this when call connects — open a media stream."""
     response = VoiceResponse()
     connect = Connect()
-    # Use wss:// for the media stream WebSocket
-    stream = Stream(url=f"{NGROK_URL.replace('https://', 'wss://')}/media-stream")
-    connect.append(stream)
+    connect.conversation_relay(
+        url=f"{NGROK_URL.replace('https://', 'wss://')}/conversation-relay",
+        transcription_provider="Deepgram",
+        tts_provider="Amazon",
+        voice="Joanna-Neural",
+        language="en-US",
+    )
     response.append(connect)
-    print("[caller] Call connected, opening media stream")
+    print("[caller] Call connected, starting Conversation Relay")
     return Response(str(response), mimetype="text/xml")
 
 
@@ -71,17 +79,21 @@ def recording_ready():
     return Response("", status=200)
 
 
-def speak(call_sid, text):
-    """Inject patient speech into the live call via Twilio TTS."""
-    try:
-        t0 = time.perf_counter()
-        twilio_client.calls(call_sid).update(
-            twiml=f"<Response><Say voice='Polly.Joanna'>{text}</Say><Redirect>{NGROK_URL}/call-connected</Redirect></Response>"
-        )
-        print(f"[caller] Twilio TTS delivered in {time.perf_counter() - t0:.2f}s")
+def speak(text):
+    global active_ws
+    if active_ws:
+        message = json.dumps({"type": "text", "token": text, "last": True})
+        active_ws.send(message)
         print(f"[caller] Speaking: {text}")
-    except Exception as e:
-        print(f"[caller] Error speaking: {e}")
+    else:
+        print("[caller] No active WebSocket to speak on")
+
+
+def end_call_via_ws():
+    global active_ws
+    if active_ws:
+        active_ws.send(json.dumps({"type": "end"}))
+        print("[caller] Sent end session message")
 
 
 def end_call(call_sid):
@@ -93,10 +105,14 @@ def end_call(call_sid):
 
 
 def start():
-    """Start Flask server with WebSocket support via flask-sock."""
-    thread = threading.Thread(
-        target=lambda: app.run(host="0.0.0.0", port=5000, debug=False),
-        daemon=True,
-    )
+    """
+    Run Flask with gevent as the async backend.
+    flask-sock handles WebSocket upgrades, gevent handles persistent connections.
+    HTTP and WebSocket share the same port — ngrok forwards both transparently.
+    """
+    from gevent import pywsgi
+
+    server = pywsgi.WSGIServer(("0.0.0.0", 5000), app)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
-    print("[caller] Webhook server running on port 5000")
+    print("[caller] Server running on port 5000 (HTTP + WebSocket)")

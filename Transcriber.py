@@ -1,129 +1,75 @@
 """
-transcriber.py - Handles real-time audio transcription via Deepgram.
+transcriber.py - Handles the Conversation Relay WebSocket connection.
+
+Buffers agent utterances and only fires on_utterance after a pause,
+so the patient waits for the agent to finish their full thought.
 """
 
-import os
 import json
-import base64
 import threading
-import websocket as ws_client
+import Caller
 
-DEEPGRAM_API_KEY = os.environ.get("DEEPGRAM_API_KEY")
-
-DEEPGRAM_URL = (
-    "wss://api.deepgram.com/v1/listen"
-    "?model=nova-2"
-    "&endpointing=500"
-    "&encoding=mulaw"
-    "&sample_rate=8000"
-    "&channels=1"
-)
-
-_current_transcriber = None
+BUFFER_DELAY = 2  # seconds to wait after last agent sentence before responding
 
 
-def set_active_transcriber(transcriber):
-    global _current_transcriber
-    _current_transcriber = transcriber
+def register_conversation_relay_handler(on_utterance):
+    """Register /conversation-relay WebSocket route on Caller.sock."""
 
+    @Caller.sock.route("/conversation-relay")
+    def conversation_relay(ws):
+        print("[transcriber] Conversation Relay WebSocket connected")
+        Caller.active_ws = ws
 
-class Transcriber:
-    def __init__(self, on_utterance):
-        self.on_utterance = on_utterance
-        self.deepgram_ws = None
-        self.is_running = False
-        self.muted = False
+        buffer = []
+        flush_timer = [None]
 
-    def start(self):
-        self.deepgram_ws = ws_client.WebSocketApp(
-            DEEPGRAM_URL,
-            header={"Authorization": f"Token {DEEPGRAM_API_KEY}"},
-            on_open=self._on_deepgram_open,
-            on_message=self._on_deepgram_message,
-            on_error=self._on_deepgram_error,
-            on_close=self._on_deepgram_close,
-        )
-        thread = threading.Thread(target=self.deepgram_ws.run_forever, daemon=True)
-        thread.start()
-        self.is_running = True
-        print("[transcriber] Connected to Deepgram")
+        def flush():
+            if buffer:
+                full_text = " ".join(buffer)
+                buffer.clear()
+                print(f"[transcriber] Agent said: {full_text}")
+                on_utterance(full_text)
 
-    def send_audio(self, audio_bytes):
-        if self.deepgram_ws and self.is_running:
+        while True:
             try:
-                self.deepgram_ws.send(audio_bytes, opcode=0x2)
-            except Exception as e:
-                print(f"[transcriber] Error sending audio: {e}")
-
-    def stop(self):
-        self.is_running = False
-        if self.deepgram_ws:
-            self.deepgram_ws.close()
-        print("[transcriber] Disconnected from Deepgram")
-
-    def _on_deepgram_open(self, ws):
-        print("[transcriber] Deepgram WebSocket open")
-
-    def _on_deepgram_message(self, ws, message):
-        data = json.loads(message)
-        if data.get("type") != "Results":
-            return
-
-        is_final = data.get("is_final", False)
-        speech_final = data.get("speech_final", False)
-        transcript = (
-            data.get("channel", {})
-            .get("alternatives", [{}])[0]
-            .get("transcript", "")
-            .strip()
-        )
-
-        if is_final and speech_final and transcript:
-            print(f"[transcriber] Agent said: {transcript}")
-            self.on_utterance(transcript)
-
-    def _on_deepgram_error(self, ws, error):
-        print(f"[transcriber] Deepgram error: {error}")
-
-    def _on_deepgram_close(self, ws, close_status, close_msg):
-        print("[transcriber] Deepgram connection closed")
-
-
-def register_media_stream_handler(app):
-    """Register /media-stream WebSocket route using flask-sock. Call once before server starts."""
-    from flask_sock import Sock
-    sock = Sock(app)
-
-    @sock.route("/media-stream")
-    def media_stream(ws):
-        print("[transcriber] Twilio media stream connected")
-        transcriber = _current_transcriber
-        if transcriber is None:
-            return
-
-        transcriber.start()
-        owned_dg_ws = transcriber.deepgram_ws  # snapshot before loop
-        try:
-            while ws.connected:
                 message = ws.receive()
-                if message is None:
-                    break
+            except Exception as e:
+                print(f"[transcriber] WebSocket error: {e}")
+                break
 
-                data = json.loads(message)
-                event = data.get("event")
+            if message is None:
+                break
 
-                if event == "media":
-                    audio_bytes = base64.b64decode(data["media"]["payload"])
-                    transcriber.send_audio(audio_bytes)
-                elif event == "stop":
-                    print("[transcriber] Twilio stream stopped")
-                    break
-        except Exception:
-            pass
-        finally:
-            # Only close the Deepgram connection this handler owns.
-            # transcriber.stop() would close self.deepgram_ws, which may
-            # already point to a newer connection opened by the next turn.
-            transcriber.is_running = False
-            if owned_dg_ws:
-                owned_dg_ws.close()
+            data = json.loads(message)
+            msg_type = data.get("type")
+
+            if msg_type == "setup":
+                print(f"[transcriber] Call setup: {data.get('callSid')}")
+
+            elif msg_type == "prompt":
+                agent_text = data.get("voicePrompt", "").strip()
+                if agent_text:
+                    buffer.append(agent_text)
+
+                    # Cancel existing timer and start a new one
+                    if flush_timer[0]:
+                        flush_timer[0].cancel()
+                    flush_timer[0] = threading.Timer(BUFFER_DELAY, flush)
+                    flush_timer[0].start()
+
+            elif msg_type == "interrupt":
+                print(f"[transcriber] Agent interrupted TTS")
+                # Cancel pending flush on interrupt
+                if flush_timer[0]:
+                    flush_timer[0].cancel()
+                buffer.clear()
+
+            elif msg_type == "error":
+                print(f"[transcriber] Error: {data.get('description')}")
+
+        # Cancel any pending timer on disconnect
+        if flush_timer[0]:
+            flush_timer[0].cancel()
+
+        Caller.active_ws = None
+        print("[transcriber] Conversation Relay WebSocket disconnected")

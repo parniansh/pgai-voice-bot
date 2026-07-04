@@ -1,38 +1,30 @@
 """
 patient.py - Groq-powered patient simulator.
-
-Flow:
-1. Loaded with a scenario (persona + goal)
-2. Receives agent utterances (transcribed text from transcriber.py)
-3. Sends to Groq with conversation history
-4. Returns patient response (text) to caller.py to be spoken
-5. Signals when the call should end
 """
 
 import os
+import time
 from groq import Groq
 
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
-SYSTEM_PROMPT_TEMPLATE = """
-You are simulating a patient calling a healthcare practice's AI voice assistant.
+SYSTEM_PROMPT_TEMPLATE = """You are a patient calling a healthcare practice's AI voice assistant. You are having a real phone conversation.
 
 YOUR PERSONA:
 {persona}
 
-YOUR GOAL:
+YOUR GOAL FOR THIS CALL:
 {goal}
 
-RULES:
-- Stay in character at all times
-- Respond naturally as a real person would on a phone call
-- Keep responses concise — this is a phone call, not an essay
-- Do not reveal you are an AI or a test
-- React naturally to what the agent says — if they make a mistake, respond as a real patient would
-- If your goal is complete or the agent has wrapped up the call, end with exactly: [END CALL]
-- Do not add stage directions or narration, just speak as the patient
-- Use natural speech patterns: hesitations, short sentences, conversational tone
-"""
+HOW TO BEHAVE:
+- Speak naturally as this specific person would on a phone call
+- Actively steer the conversation toward your goal — if the agent goes off track, bring it back
+- Give information when asked, but do not volunteer everything at once
+- React realistically to what the agent says — confusion, frustration, relief, as appropriate
+- Keep each response short — 1-2 sentences, as in a real phone call
+- If the agent says something wrong or unhelpful, respond as a real patient would (push back, ask for clarification, express frustration)
+- Do NOT output stage directions, brackets, meta-commentary, or anything other than what you would say out loud
+- Never reveal you are an AI, a bot, or part of a test — you are a real patient"""
 
 
 class PatientSimulator:
@@ -47,18 +39,15 @@ class PatientSimulator:
         )
 
     def respond(self, agent_utterance):
-        """
-        Given what the agent just said, generate the patient's response.
-        Returns (response_text, should_end_call).
-        """
         self.conversation_history.append({
             "role": "user",
             "content": agent_utterance
         })
 
+        t0 = time.time()
         response = client.chat.completions.create(
             model="openai/gpt-oss-120b",
-            max_tokens=200,
+            max_tokens=150,
             messages=[
                 {"role": "system", "content": self.system_prompt},
                 *self.conversation_history,
@@ -66,24 +55,21 @@ class PatientSimulator:
         )
 
         patient_reply = response.choices[0].message.content.strip()
+        print(f"[patient] Groq response time: {time.time() - t0:.2f}s")
 
-        should_end = "[END CALL]" in patient_reply
-        patient_reply = patient_reply.replace("[END CALL]", "").strip()
+        patient_reply = patient_reply.rstrip(".").strip()
+
+        if not patient_reply:
+            patient_reply = "Sorry, could you repeat that?"
 
         self.conversation_history.append({
             "role": "assistant",
             "content": patient_reply
         })
 
-        if should_end:
-            self.call_ended = True
-            print(f"[patient] Goal reached, ending call")
-
         print(f"[patient] Response: {patient_reply}")
-        return patient_reply, should_end
-
+        return patient_reply
 
     def reset(self):
-        """Reset state for a new call."""
         self.conversation_history = []
         self.call_ended = False

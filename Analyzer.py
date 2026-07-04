@@ -10,7 +10,6 @@ Flow:
 
 import os
 import json
-import time
 from groq import Groq
 
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
@@ -87,15 +86,16 @@ TRANSCRIPT:
 {transcript_text}
 """
 
-        t0 = time.perf_counter()
+        print(f"[analyzer] Prompt length: {len(prompt)} chars")
         response = client.chat.completions.create(
             model="openai/gpt-oss-120b",
-            max_tokens=1000,
+            max_tokens=2000,
             messages=[{"role": "user", "content": prompt}],
         )
-        print(f"[analyzer] Groq responded in {time.perf_counter() - t0:.2f}s")
 
         raw = response.choices[0].message.content.strip()
+        print(f'[analyzer] Raw response length: {len(raw)}')
+        print(f'[analyzer] Raw response preview: {raw[:200]}')
 
         try:
             report = json.loads(raw)

@@ -1,3 +1,6 @@
+from gevent import monkey
+monkey.patch_all()
+
 """
 main.py - Orchestrator for the voice bot testing framework.
 
@@ -6,9 +9,6 @@ Usage:
   python main.py --all                     # run all scenarios
   python main.py                           # does nothing
 """
-
-from gevent import monkey
-monkey.patch_all()
 
 import os
 import json
@@ -27,6 +27,9 @@ from Analyzer import Analyzer
 
 SCENARIOS_PATH = "Scenarios.json"
 
+# Mutable callback reference — updated per scenario without re-registering the route
+current_on_utterance = [None]
+
 
 def load_scenarios():
     with open(SCENARIOS_PATH) as f:
@@ -41,26 +44,23 @@ def run_scenario(scenario, analyzer):
     print(f"{'='*50}")
 
     transcript = []
-    recording_url = [None]  # list so closure can mutate it
+    recording_url = [None]
     call_sid = [None]
-    call_done = threading.Event()  # thread-safe signal
+    call_done = threading.Event()
     patient = PatientSimulator(scenario)
 
     def on_utterance(agent_text):
         if call_done.is_set():
             return
 
+        time.sleep(0.5)  # wait for agent TTS to fully finish before responding
+
         transcript.append({"speaker": "agent", "text": agent_text})
 
-        patient_reply, should_end = patient.respond(agent_text)
+        patient_reply = patient.respond(agent_text)
         transcript.append({"speaker": "patient", "text": patient_reply})
 
-        Caller.speak(call_sid[0], patient_reply)
-
-        if should_end:
-            time.sleep(2)  # let Twilio finish speaking
-            Caller.end_call(call_sid[0])
-            call_done.set()
+        Caller.speak(patient_reply)
 
     def on_call_ended():
         print(f"[main] Call ended for {scenario['id']}")
@@ -69,26 +69,20 @@ def run_scenario(scenario, analyzer):
     def on_recording_ready(url):
         recording_url[0] = url
 
-    # Register callbacks
+    # Update callback reference for this scenario
+    current_on_utterance[0] = on_utterance
     Caller.on_call_ended_callback = on_call_ended
     Caller.on_recording_ready_callback = on_recording_ready
 
-    # Start transcriber
-    transcr = transcriber_module.Transcriber(on_utterance=on_utterance)
-    transcriber_module.set_active_transcriber(transcr)
-
-    # Make the call — agent speaks first, transcriber fires on_utterance
     call_sid[0] = Caller.make_call()
     print(f"[main] Call SID: {call_sid[0]}")
     print(f"[main] Waiting for agent to speak...")
 
-    # Block until call ends or timeout (5 min)
     finished = call_done.wait(timeout=300)
     if not finished:
         print(f"[main] Timed out — ending call")
         Caller.end_call(call_sid[0])
 
-    # Wait for recording to be available
     time.sleep(5)
 
     print(f"[main] Analyzing transcript...")
@@ -129,9 +123,22 @@ def main():
     if not args.scenario and not args.all:
         return
 
-    transcriber_module.register_media_stream_handler(Caller.app)
+    # Register WebSocket handler once at startup — routes through current_on_utterance
+    transcriber_module.register_conversation_relay_handler(
+        lambda text: current_on_utterance[0](text) if current_on_utterance[0] else None
+    )
+
     Caller.start()
-    time.sleep(1)
+
+    # Wait until server is actually ready
+    import requests as req
+    for _ in range(20):
+        try:
+            req.get('http://localhost:5000/health', timeout=1)
+            print('[main] Server ready')
+            break
+        except Exception:
+            time.sleep(0.5)
 
     global_criteria, scenarios = load_scenarios()
     analyzer = Analyzer(global_criteria)
