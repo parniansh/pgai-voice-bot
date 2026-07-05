@@ -54,7 +54,7 @@ def call_connected():
         url=f"{NGROK_URL.replace('https://', 'wss://')}/conversation-relay",
         transcription_provider="Deepgram",
         tts_provider="Amazon",
-        voice="Joanna-Neural",
+        voice="Matthew-Neural",
         language="en-US",
     )
     response.append(connect)
