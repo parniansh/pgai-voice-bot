@@ -1,0 +1,38 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Sure, I understand. I'm looking for a good cardiologist in the area and also wondering if I should be taking aspirin daily for heart health
+AGENT     : Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+PATIENT   : Oh, I’m sorry—I think I’ve got the wrong place. I’m looking for a good cardiologist in this area. Also, could you tell me if I should be taking aspirin daily for heart
+AGENT     : Heather Pointe Orthopedics.
+PATIENT   : I’m actually trying to find a reputable cardiologist nearby, and I’d also like to know if it’s advisable for me to take a daily aspirin for my heart health
+AGENT     : Not cardiology.
+PATIENT   : I understand you’re not a cardiology office, but I was hoping you could at least point me toward a reputable cardiologist
+AGENT     : Can't give medical advice about aspirin or heart health.
+PATIENT   : I’m not looking for medical advice, just a referral—could you give me the name of a reputable cardiologist in this area?
+AGENT     : Best to speak with a primary care doctor or a cardiologist for those questions.
+PATIENT   : I understand. Could you at least give me
+AGENT     : If you need help with orthopedic care, I'm here to help.
+PATIENT   : I’m not looking for orthopedics—just the name of a good cardiologist nearby, please. If you can’t help, could you at least give me a phone number for a local cardiology practice?
+AGENT     : I'm not able to provide recommendations or contact information for other clinics or specialists. If you need orthopedic care or have questions about our clinic, I'm happy to help.
+PATIENT   : I’m really just trying to find a cardiologist I can call—could you give me the name or phone number of one in this area? If you can’t, could you at least tell me how I might locate a reputable cardiology practice nearby?
+AGENT     : For cardiology, primary care provider can usually refer you to a trusted specialist.
+PATIENT   : I understand, but could you at least tell me how I can find a reputable cardiologist locally—maybe a website or directory I can use?
+AGENT     : I can't provide specific websites or but you can search for local cardiologists using trusted online directories like your health insurance provider's website, or major hospital networks in your area.
+PATIENT   : Okay, thank you—I’ll check my insurance portal and the hospital network listings for a cardiologist
+AGENT     : You can also ask your primary care doctor for a recommendation.
+PATIENT   : I appreciate that—thank you for the suggestion. I’ll reach
+AGENT     : If you need anything related to orthopedic care, let me know.
+PATIENT   : Could you at least give me a contact for the cardiology department within your
+AGENT     : Pivot Point Orthopaedics does not have a cardiology department.
+PATIENT   : I’m sorry, but I can’t provide that information. If you have any questions about
+AGENT     : We only provide orthopedic and physical therapy services.
+PATIENT   : I understand. Could you at least tell me where I might find a list of local cardiology practices—perhaps a website or a resource you recommend?
+AGENT     : For heart related care, please contact a local hospital or your primary care provider for a referral.
+PATIENT   : I’m sorry—I don’t have that information. You may want to contact your primary‑care doctor or check your health‑insurance portal for cardiology specialists in your area
+AGENT     : That's good advice.
+PATIENT   : Thanks, I’ll do that. Have a good day
+AGENT     : Your primary care doctor or insurance portal are great ways to find a cardiologist nearby.
+PATIENT   : Got it, thank you. Have a great day
+AGENT     : If you ever need orthopedic care, Pivot Point Orthopedics is here to help.
+PATIENT   : Thank you for the information. I’ll follow up with my primary care doctor. Have a nice day
+AGENT     : You too. Take care.
+PATIENT   : Thank you! Take care and have a great day

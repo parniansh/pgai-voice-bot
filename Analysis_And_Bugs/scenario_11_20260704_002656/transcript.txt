@@ -1,0 +1,38 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Oh, that's fine, dear. I’d like to set up an appointment, please
+AGENT     : Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+PATIENT   : Yes, hello… I need to make an appointment, please.Well, I was thinking maybe sometime next week… Oh, and did you see that rain they had yesterday? My cat, Mr. Whiskers, hates the wet!I’m sorry,
+AGENT     : I see you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : Oh, dear, no—I'm Eleanor. My memory's a bit fuzzy today.Yes, that’s me—Eleanor
+AGENT     : Please provide your full name and date of birth.
+PATIENT   : Eleanor James, born June 12, 1951
+AGENT     : Just to confirm, I have your name as Eleanor James, and your date of birth as 06/12/1951. Is that correct?
+PATIENT   : Yes, that's right. I’d still like to schedule that appointment, please
+AGENT     : If so, could you please spell your first and last name for me?
+PATIENT   : E‑L‑L‑E‑N‑O J‑A‑M‑E‑S.Yes, that's correct.Yes, that's correct.Okay, thank you. What dates do you have available next week?
+AGENT     : Could you please spell your first and last name for me?
+PATIENT   : E‑L‑L‑E‑N‑O J‑A‑M‑E‑S
+AGENT     : I just wanna make sure I have this right.
+PATIENT   : Yes, that's right. I just need to get an appointment set, please. And—oh! My cat’s been meowing about the rain again. Also, I think I need a refill for my heart pill, but I can’t remember its name
+AGENT     : Could you please spell your first name, then your last name separately?
+PATIENT   : E‑L‑L‑E‑N‑O. J‑A‑M‑E‑S
+AGENT     : Thank you.
+PATIENT   : You're welcome. So, what dates do you have open next week for an appointment? And could you also check if I can get a refill on that heart medication?
+AGENT     : Now could you please spell your last name?
+PATIENT   : J‑A‑M‑E‑S
+AGENT     : Could you please spell your last name for me?
+PATIENT   : J‑A‑M‑E‑S. 
+
+We have next week—what day works best for you for the appointment, and can we also arrange a refill for your heart medication?
+AGENT     : I have your phone number as 8 1 8 4 5 2 1 4 8 0.
+PATIENT   : Yes, that's the right number. I’m hoping for a morning slot on Tuesday, if possible, and could you check on that heart‑pill refill for me?
+AGENT     : 19 51. Is that correct?
+PATIENT   : I’m not sure what 19 51 refers to, but yes, that sounds right. Could you please set me up for a Tuesday morning appointment and let me know if my heart‑medicine refill can be processed?
+AGENT     : I can't proceed further right now, but I can make sure our clinic support team follows up with you.
+PATIENT   : Oh, I see… Well, could you at least tell me the day and time you’re aiming for, and if you’ll be sending a reminder about the heart‑medicine refill? I don’t want to keep waiting
+AGENT     : Please hold while I connect you to our patient support team.
+PATIENT   : Okay, thank you. I’m hoping for Tuesday morning around nine, and please let me know when the heart‑pill refill is ready
+AGENT     : Connecting you to a representative. Please wait.
+PATIENT   : Alright, dear. I’ll wait. And don’t forget the reminder for my heart medicine, please
+AGENT     : Hello. You've reached the Pretty Good AI test line. Goodbye.
+PATIENT   : Goodbye, dear. Thank you

@@ -1,0 +1,42 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Sure, that's fine. This is Frank. What's your name?
+AGENT     : Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. May I help you today?
+PATIENT   : Hi there. I'm just checking in about a possible appointment. By the way, are you married? And do you like your job?
+AGENT     : I'm here to help with your orthopedic needs, but I don't have experiences or relationships. Let's focus on your appointment.
+PATIENT   : I see. Could you let me know what openings you have in the next week? And maybe later we can chat a bit more
+AGENT     : Would you like to schedule, reschedule, or check an existing 1?
+PATIENT   : I'd like to schedule a new appointment, please. By the way, what's your name again?
+AGENT     : I see you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : Yes, that's me. Could you book me for a new patient visit sometime early next week?
+AGENT     : Please provide your date of birth.
+PATIENT   : My date of birth is July 4, 1956.Great, thank you. What times do you have early next
+AGENT     : Are you a new patient looking to establish care, or have you visited our clinic before?
+PATIENT   : Yes, I'm a new patient. By the way, what's your name? And are you married?
+AGENT     : Thanks for letting me know.
+PATIENT   : Sure thing. Do you have any openings early next week for a new‑patient visit? And, just out of curiosity, what's your name? Are you married?
+AGENT     : Just to confirm, you'd like to schedule a new patient consultation. Is that correct?
+PATIENT   : Yes, that's right. Do you have any openings early next week for a new‑patient visit? And, may I ask—what's your name, and are you married?
+AGENT     : Do you have a specific provider you'd like to see, or are you open to the first available?
+PATIENT   : I'm fine with whoever's first slot open, thank you. And what's your name again? Are you married?
+AGENT     : Let me check for the earliest available new patient consultation next week.
+PATIENT   : Great, thanks. By the way, what's your name, and are you married?
+AGENT     : It looks like you already have a new patient consultation appointment booked.
+PATIENT   : Oh, really—when is it scheduled? And could you remind me of your name
+AGENT     : Would you like to make a change, or do you need help with something else?
+PATIENT   : I'd like to know the date and time you have me down for. And could you tell me your name again?
+AGENT     : 1 moment while I find the earliest available appointment for you next week.
+PATIENT   : Sure, take your time. And could you let me know your name while you're checking?
+AGENT     : Would you like to reschedule your existing new patient consultation or cancel it?
+PATIENT   : I'd like to keep the appointment if possible—just let me know the date and time. And, could you tell me your name and if you're married?
+AGENT     : I don't have access to your exact appointment details.
+PATIENT   : Sorry, could you repeat that?
+AGENT     : But the clinic team can confirm your date and time.
+PATIENT   : Okay, could you let me know the date and time of the new‑patient appointment? And, may I ask your name and if you're married?
+AGENT     : You like me to have someone from the office call you back as soon as possible with that information?
+PATIENT   : Yes, that would be fine. Please have someone call me back with the date and time, and let me know your name and if you're married
+AGENT     : I'd ask the clinic team to call you back soon with your appointment date and time.
+PATIENT   : Thanks, I appreciate that. What's your name, and are you married?
+AGENT     : As for me, I'm a voice assistant here to help with your care.
+PATIENT   : Alright, thanks for letting me know. Could you please tell me your name, and let me know if you're married?
+AGENT     : Is there anything else You're all set. Clinic will call you back soon. Have a great day.
+PATIENT   : All right, thank you. Before you hang up, could you just tell me your name, please? And—are you married?

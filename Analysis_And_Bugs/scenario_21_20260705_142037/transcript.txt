@@ -1,0 +1,38 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Sure, that's fine
+AGENT     : Part of Pretty Good AI. How may I help you today?
+PATIENT   : I have a question about a recent bill I got
+AGENT     : So you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : No, this is Steve.My DOB is March 5, 2002
+AGENT     : Please provide your full name, including your last name, along with your date of birth.
+PATIENT   : Steve Johnson, June 12 2001
+AGENT     : Just to confirm, can you please spell your first and last name for me?
+PATIENT   : S‑T‑E‑V‑E, J‑O‑H‑N‑S‑O‑N.My DOB is September 3 1999
+AGENT     : And your date of birth is 06/12/2001. Correct?
+PATIENT   : No, that's not right. It's July 22 2003
+AGENT     : Just to make sure I have it correct.
+PATIENT   : My DOB is actually January 14 2000
+AGENT     : Please spell your first and last name, and tell me your date of birth 1 more time.
+PATIENT   : S‑T‑E‑V‑E, J‑O‑H‑N‑S‑O‑N. My DOB is March 30 2002
+AGENT     : Thank you. And can you confirm your date of birth?
+PATIENT   : That's not correct—my birthday is August 9 2001
+AGENT     : Would you like me to look up your record using the phone number you have on file with us?
+PATIENT   : Sure, go ahead
+AGENT     : If so, please provide that number. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+PATIENT   : You can use the number on file—555‑123‑
+AGENT     : Could you please provide the full 10 digit phone number you have on file? Including the area code?
+PATIENT   : 555‑219‑8743
+
+(And my DOB is still February 2 1998.)
+AGENT     : I have your phone number as 5 5 5 2 1 9 8 7 4 3 and your date of birth as 02/02/1998. Is that correct?
+PATIENT   : No, that's not right—my birthday is October 11 2002
+AGENT     : I can't access your billing details right now. But I can connect you to our patient support team for help. Would you like me to transfer you?
+PATIENT   : Sorry, could you repeat that?
+AGENT     : I'm unable to look up your billing details at the moment.
+PATIENT   : Can you transfer me to someone who can see the bill, please?
+AGENT     : I can connect you to our patient support team so they can help. You like to be transferred?
+PATIENT   : Yes, please transfer me
+AGENT     : Connecting you to a representative. Please wait.
+PATIENT   : Thanks.You're welcome
+AGENT     : Hello. You've reached the Pretty Good AI test line. Goodbye.
+PATIENT   : Okay, thanks. Bye

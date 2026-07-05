@@ -1,0 +1,146 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Oh, that's fine, dear. I\u2019d like to set up an appointment, please"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, hello\u2026 I need to make an appointment, please.Well, I was thinking maybe sometime next week\u2026 Oh, and did you see that rain they had yesterday? My cat, Mr. Whiskers, hates the wet!I\u2019m sorry,"
+  },
+  {
+    "speaker": "agent",
+    "text": "I see you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Oh, dear, no\u2014I'm Eleanor. My memory's a bit fuzzy today.Yes, that\u2019s me\u2014Eleanor"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Eleanor\u202fJames, born June\u202f12,\u202f1951"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, I have your name as Eleanor James, and your date of birth as 06/12/1951. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's right. I\u2019d still like to schedule that appointment, please"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, could you please spell your first and last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "E\u2011L\u2011L\u2011E\u2011N\u2011O\u202fJ\u2011A\u2011M\u2011E\u2011S.Yes, that's correct.Yes, that's correct.Okay, thank you. What dates do you have available next week?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Could you please spell your first and last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "E\u2011L\u2011L\u2011E\u2011N\u2011O\u202fJ\u2011A\u2011M\u2011E\u2011S"
+  },
+  {
+    "speaker": "agent",
+    "text": "I just wanna make sure I have this right."
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's right. I just need to get an appointment set, please. And\u2014oh! My cat\u2019s been meowing about the rain again. Also, I think I need a refill for my heart pill, but I can\u2019t remember its name"
+  },
+  {
+    "speaker": "agent",
+    "text": "Could you please spell your first name, then your last name separately?"
+  },
+  {
+    "speaker": "patient",
+    "text": "E\u2011L\u2011L\u2011E\u2011N\u2011O.\u202fJ\u2011A\u2011M\u2011E\u2011S"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thank you."
+  },
+  {
+    "speaker": "patient",
+    "text": "You're welcome. So, what dates do you have open next week for an appointment? And could you also check if I can get a refill on that heart medication?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Now could you please spell your last name?"
+  },
+  {
+    "speaker": "patient",
+    "text": "J\u2011A\u2011M\u2011E\u2011S"
+  },
+  {
+    "speaker": "agent",
+    "text": "Could you please spell your last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "J\u2011A\u2011M\u2011E\u2011S. \n\nWe have next week\u2014what day works best for you for the appointment, and can we also arrange a refill for your heart medication?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your phone number as 8 1 8 4 5 2 1 4 8 0."
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's the right number. I\u2019m hoping for a morning slot on Tuesday, if possible, and could you check on that heart\u2011pill refill for me?"
+  },
+  {
+    "speaker": "agent",
+    "text": "19 51. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019m not sure what 19\u202f51 refers to, but yes, that sounds right. Could you please set me up for a Tuesday morning appointment and let me know if my heart\u2011medicine refill can be processed?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you."
+  },
+  {
+    "speaker": "patient",
+    "text": "Oh, I see\u2026 Well, could you at least tell me the day and time you\u2019re aiming for, and if you\u2019ll be sending a reminder about the heart\u2011medicine refill? I don\u2019t want to keep waiting"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please hold while I connect you to our patient support team."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, thank you. I\u2019m hoping for Tuesday morning around nine, and please let me know when the heart\u2011pill refill is ready"
+  },
+  {
+    "speaker": "agent",
+    "text": "Connecting you to a representative. Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Alright, dear. I\u2019ll wait. And don\u2019t forget the reminder for my heart medicine, please"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Goodbye, dear. Thank you"
+  }
+]

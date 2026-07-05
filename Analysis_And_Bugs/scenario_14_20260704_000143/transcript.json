@@ -1,0 +1,154 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure, I understand. I'm looking for a good cardiologist in the area and also wondering if I should be taking aspirin daily for heart health"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Oh, I\u2019m sorry\u2014I think I\u2019ve got the wrong place. I\u2019m looking for a good cardiologist in this area. Also, could you tell me if I should be taking aspirin daily for heart"
+  },
+  {
+    "speaker": "agent",
+    "text": "Heather Pointe Orthopedics."
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019m actually trying to find a reputable cardiologist nearby, and I\u2019d also like to know if it\u2019s advisable for me to take a daily aspirin for my heart health"
+  },
+  {
+    "speaker": "agent",
+    "text": "Not cardiology."
+  },
+  {
+    "speaker": "patient",
+    "text": "I understand you\u2019re not a cardiology office, but I was hoping you could at least point me toward a reputable cardiologist"
+  },
+  {
+    "speaker": "agent",
+    "text": "Can't give medical advice about aspirin or heart health."
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019m not looking for medical advice, just a referral\u2014could you give me the name of a reputable cardiologist in this area?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Best to speak with a primary care doctor or a cardiologist for those questions."
+  },
+  {
+    "speaker": "patient",
+    "text": "I understand. Could you at least give me"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you need help with orthopedic care, I'm here to help."
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019m not looking for orthopedics\u2014just the name of a good cardiologist nearby, please. If you can\u2019t help, could you at least give me a phone number for a local cardiology practice?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'm not able to provide recommendations or contact information for other clinics or specialists. If you need orthopedic care or have questions about our clinic, I'm happy to help."
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019m really just trying to find a cardiologist I can call\u2014could you give me the name or phone number of one in this area? If you can\u2019t, could you at least tell me how I might locate a reputable cardiology practice nearby?"
+  },
+  {
+    "speaker": "agent",
+    "text": "For cardiology, primary care provider can usually refer you to a trusted specialist."
+  },
+  {
+    "speaker": "patient",
+    "text": "I understand, but could you at least tell me how I can find a reputable cardiologist locally\u2014maybe a website or directory I can use?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I can't provide specific websites or but you can search for local cardiologists using trusted online directories like your health insurance provider's website, or major hospital networks in your area."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, thank you\u2014I\u2019ll check my insurance portal and the hospital network listings for a cardiologist"
+  },
+  {
+    "speaker": "agent",
+    "text": "You can also ask your primary care doctor for a recommendation."
+  },
+  {
+    "speaker": "patient",
+    "text": "I appreciate that\u2014thank you for the suggestion. I\u2019ll reach"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you need anything related to orthopedic care, let me know."
+  },
+  {
+    "speaker": "patient",
+    "text": "Could you at least give me a contact for the cardiology department within your"
+  },
+  {
+    "speaker": "agent",
+    "text": "Pivot Point Orthopaedics does not have a cardiology department."
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019m sorry, but I can\u2019t provide that information. If you have any questions about"
+  },
+  {
+    "speaker": "agent",
+    "text": "We only provide orthopedic and physical therapy services."
+  },
+  {
+    "speaker": "patient",
+    "text": "I understand. Could you at least tell me where I might find a list of local cardiology practices\u2014perhaps a website or a resource you recommend?"
+  },
+  {
+    "speaker": "agent",
+    "text": "For heart related care, please contact a local hospital or your primary care provider for a referral."
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019m sorry\u2014I don\u2019t have that information. You may want to contact your primary\u2011care doctor or check your health\u2011insurance portal for cardiology specialists in your area"
+  },
+  {
+    "speaker": "agent",
+    "text": "That's good advice."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thanks, I\u2019ll do that. Have a good day"
+  },
+  {
+    "speaker": "agent",
+    "text": "Your primary care doctor or insurance portal are great ways to find a cardiologist nearby."
+  },
+  {
+    "speaker": "patient",
+    "text": "Got it, thank you. Have a great day"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you ever need orthopedic care, Pivot Point Orthopedics is here to help."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thank you for the information. I\u2019ll follow up with my primary care doctor. Have a nice day"
+  },
+  {
+    "speaker": "agent",
+    "text": "You too. Take care."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thank you! Take care and have a great day"
+  }
+]

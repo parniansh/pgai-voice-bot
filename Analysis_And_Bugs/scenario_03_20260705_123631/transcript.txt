@@ -1,0 +1,50 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Sorry, could you repeat that?
+AGENT     : Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+PATIENT   : Hi, I just moved to the area and I was wondering what your office hours are
+AGENT     : We're open Monday, Tuesday, and Thursday from 9AM to 4PM, Wednesday from 12PM to 7PM, and Friday from 9AM to 12PM.
+PATIENT   : Thanks. Could you tell me the address of the office?
+AGENT     : Is there anything else you'd like to know about the clinic?
+PATIENT   : Yes, could you let me know what the parking situation is like there?
+AGENT     : Our clinic is located at 1234 Recovery Way, suite 200, Austin.
+PATIENT   : Thanks, could you tell me what the parking situation is like?
+AGENT     : There's free patient parking available on the surface lot right in front of the building.
+PATIENT   : Great, thank you. I'd like to schedule an appointment
+AGENT     : Would you like any more details about our services or providers?
+PATIENT   : Yes, I'd like to schedule an appointment. When is the next opening for a new patient?
+AGENT     : I see you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : No, this is Susan
+AGENT     : Please provide your full name and date of birth.
+PATIENT   : Susan Miller, June 12, 1991
+AGENT     : Just to confirm, I have your name as Susan Miller and your date birth as 06/12/1991. Is that correct?
+PATIENT   : Yes, that's correct
+AGENT     : If so, please spell your first and last name for me.
+PATIENT   : S U S A N  M I L L E R
+AGENT     : Would you like to use your phone number to look up your record?
+PATIENT   : Yes, that's fine
+AGENT     : If so, please provide the number you have on file with us.
+PATIENT   : Sorry, could you repeat that?
+AGENT     : Let me know what you prefer.
+PATIENT   : My phone number is 555-123-4567
+AGENT     : No problem.
+PATIENT   : When is the next available appointment for a new patient?
+AGENT     : And your date of birth as June twelfth 19 91.
+PATIENT   : Sorry, could you repeat that?
+AGENT     : Could you please spell your first and last name for me 1 more time?
+PATIENT   : S U S A N  M I L L E R
+AGENT     : Of course. Please spell your first and last name for me.
+PATIENT   : S U S A N  M I L L E R
+AGENT     : I have Susan Miller, and your date of birth as 06/12/1991.
+PATIENT   : Yes, that's correct
+AGENT     : I have your phone number as 8 1 8 4 5 2 1 4 8 0, and your date of birth is June twelfth. 19 91. Is that correct?
+PATIENT   : No, that's not correct
+AGENT     : Please provide the phone number you have on file with us.
+PATIENT   : 555-123-4567
+AGENT     : I can't proceed further right now, but I can make sure our clinic support team follows up with you.
+PATIENT   : Alright, I look forward to hearing from your team
+AGENT     : Please hold while I document your request for appointment.
+PATIENT   : Thank you
+AGENT     : Connecting you to a representative. Please wait.
+PATIENT   : Okay, thank you
+AGENT     : Hello. You've reached the Pretty Good AI test line. Goodbye.
+PATIENT   : Sorry, could you repeat that?

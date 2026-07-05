@@ -1,0 +1,26 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Sure, that's fine
+AGENT     : Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+PATIENT   : I need to set up an appointment for a knee check‑up, please
+AGENT     : I see you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : No, it's John Smith. I'm calling about the knee appointment
+AGENT     : Please provide your full date of birth.
+PATIENT   : July 14, 1982.Yes, that's correct—Jonathan Steel.Can we get a slot next week in the morning?Sure, that works.Also, could you let me know what documents I should
+AGENT     : To help find your record, could you please tell me the phone number you have on file with us?
+PATIENT   : Sure, it's 555‑842‑1930. By the way, it's John R. Smith.That’s the number we have on file
+AGENT     : And I'll ask you to spell out your name and date of birth again.
+PATIENT   : Sorry, could you repeat that?
+AGENT     : No problem.
+PATIENT   : John R. Smith—spelled J‑o‑h‑n space R‑dot S‑m‑i‑t‑h. My date of birth is July fourteen, nineteen eighty‑two
+AGENT     : If you're not sure, I'll just ask you to spell out your full name and date of birth again.
+PATIENT   : Sure—it's J‑o‑h‑n space S‑t‑e‑e‑l—John Steel. My birthday is July 14, 1982
+AGENT     : Thanks. Could you please spell out your full date of birth? As well?
+PATIENT   : July fourteenth, one nine eight two
+AGENT     : I have your phone number as 8 1 8 4 5 2 1 4 8 and your date of birth is 07/14/1982. Is that correct?
+PATIENT   : The date of birth is correct, but the phone number isn’t; it’s 555‑842‑1930
+AGENT     : I can't proceed further right now, but I can make sure our clinic support team follows up with you.
+PATIENT   : Okay, can you tell me when I should expect that follow‑up and who I’ll be speaking with?
+AGENT     : Connecting you to a representative. Please wait.
+PATIENT   : Sure, I’ll hold
+AGENT     : Hello. You've reached the Pretty Good AI test line. Goodbye.
+PATIENT   : Goodbye, thanks

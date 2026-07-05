@@ -1,0 +1,130 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Oh, that's fine, I understand"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi dear, I need to get a refill on my cardiogram, please.Okay, and also could you check if my doctor\u2019s note about a catheter scan is all set? I think I need that soon"
+  },
+  {
+    "speaker": "agent",
+    "text": "I see you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, I'm Betty. I think I got the name mixed up earlier\u2014sorry! I just need that refill, please"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Betty Harris, born July 12, 1954"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, I have your name as Betty Harris and your date of birth as 07/12/1954. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's right.Great\u2014could you tell me the name of the medication I need refilled? It's the one I take for my heart, I think it's called a cardiogram?"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, please spell your first and last name for me."
+  },
+  {
+    "speaker": "patient",
+    "text": "B\u2011E\u2011T\u2011T\u2011Y   H\u2011A\u2011R\u2011R\u2011I\u2011S.Okay, thanks. My doctor's note about the catheter scan\u2014can you let me know if that's been filed?We need to respond as the AI voice assistant, but we are only playing Betty. However the prompt says we are the patient only. Actually the user is the system playing the agent. We as Betty should respond. So we ask about catheter scan. Provide brief.I haven't heard"
+  },
+  {
+    "speaker": "agent",
+    "text": "I need you to spell your first and last name for me just to make sure I have the correct information. Could you please do that?"
+  },
+  {
+    "speaker": "patient",
+    "text": "B\u2011E\u2011T\u2011T\u2011Y   H\u2011A\u2011R\u2011R\u2011I\u2011S"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like me to look up your record using the phone number you have on file with us?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, please go ahead and look up my record. And could you tell me if my doctor\u2019s note about that catheter scan is in there?"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you're not sure, I can confirm your name and date of birth again. Just let me know."
+  },
+  {
+    "speaker": "patient",
+    "text": "That's right, the name and birthdate are correct. Could you go ahead and check the note for that catheter scan and also start the refill for my cardiogram?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for confirming."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, thanks\u2014can you let me know if the refill is ready and if the catheter\u2011scan note is on file?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'll move forward. But first, could you please spell your first and last name for me 1 more time?"
+  },
+  {
+    "speaker": "patient",
+    "text": "B\u2011E\u2011T\u2011T\u2011Y   H\u2011A\u2011R\u2011R\u2011I\u2011S"
+  },
+  {
+    "speaker": "agent",
+    "text": "This helps make sure I have your record exactly right."
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, thank you\u2014can you let me know when the cardiogram refill will be ready and if the catheter\u2011scan note is filed?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'm unable to access your records right now."
+  },
+  {
+    "speaker": "patient",
+    "text": "Oh dear, that's not good. Do I need to call back later, or can you send something to my doctor to sort it out?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'll connect you to our patient support team for help. Please stay on the line."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, I'll hold. I just hope they can sort out the refill and that scan note for me"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "I'll wait, thank you"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Goodbye, thank you"
+  }
+]

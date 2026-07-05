@@ -1,0 +1,32 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Sorry, could you repeat that?
+AGENT     : Part of Pretty Good AI. How may I help you today?
+PATIENT   : Hi, I’d like to schedule an appointment, preferably on a Sunday morning if possible
+AGENT     : See you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : No, this is Karen.I’m calling to schedule an appointment, preferably on a Sunday morning if possible
+AGENT     : Please provide your full name and date of birth.
+PATIENT   : My name is Karen Thompson, and my date of birth is May 12, 1988
+AGENT     : Just to confirm, I have your name as Karen Thompson, and your date of birth as May twelfth. 19 88. Is that correct?
+PATIENT   : Yes, that’s correct.I’d really appreciate if we could find a Sunday morning slot.Is there any availability next Sunday morning?If not next week, the following Sunday would work for me as well.I can be flexible with the exact time, just as long as it’s in
+AGENT     : If so, could you please spell your first and last name for me?
+PATIENT   : Sure. K‑A‑R‑E‑N, T‑H‑O‑M‑P‑S‑O‑N
+AGENT     : Would you like to use your phone number to look up your record?
+PATIENT   : Yes, you can use my number. It’s 555‑867‑5309.I’m hoping we can get a Sunday morning appointment
+AGENT     : If so, please provide the number you have on file with us.
+PATIENT   : My number on file is 555‑867‑5309
+AGENT     : If you're not sure, I can confirm your name and date of birth again.
+PATIENT   : Yes, that’s correct. My name is Karen Thompson and my date of birth is May 12, 1988
+AGENT     : Let me know what you prefer.
+PATIENT   : I’d prefer a Sunday morning appointment
+AGENT     : Please provide the phone number you have on file with us.
+PATIENT   : 555‑867‑5309
+AGENT     : I have your phone number as 5 5 5 8 6 7 and your date of birth is 05/12/1988. Is that correct?
+PATIENT   : Yes, that’s correct. My number is 555‑867‑5309 and my birthdate is May 12, 1988
+AGENT     : Can't proceed further right now, but I can make sure our clinic support team follows up with you.
+PATIENT   : Okay, please have them call me back as soon as possible—I really need a Sunday morning slot
+AGENT     : Would you like me to connect you to our patient support team?
+PATIENT   : Yes, please connect me to patient support. I’m still hoping to get a Sunday morning appointment
+AGENT     : Connecting you to a representative. Please wait.
+PATIENT   : Thank you
+AGENT     : Hello. You've reached the Pretty Good AI test line. Goodbye.
+PATIENT   : Sorry, could you repeat that?

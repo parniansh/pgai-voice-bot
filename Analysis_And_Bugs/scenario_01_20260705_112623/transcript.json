@@ -1,0 +1,122 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "That's fine"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopedics. Part of Pretty Good AI. May I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi, I'd like to schedule my first appointment for a general check\u2011up"
+  },
+  {
+    "speaker": "agent",
+    "text": "I see you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, I'm Danielle. I need to set up a new patient appointment"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Danielle Harper, March 12, 1981"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, I have your name as Danielle Harper?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's correct. My DOB is March 12, 1981"
+  },
+  {
+    "speaker": "agent",
+    "text": "And your date of birth as 03/12/1981."
+  },
+  {
+    "speaker": "patient",
+    "text": "That's right. What's the next step?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Is that correct? If so, could you please spell your first and last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure. D\u2011A\u2011N\u2011I\u2011E\u2011L\u2011L\u2011E, H\u2011A\u2011R\u2011P\u2011E\u2011R"
+  },
+  {
+    "speaker": "agent",
+    "text": "Go ahead and spell your first and last name, please."
+  },
+  {
+    "speaker": "patient",
+    "text": "D\u2011A\u2011N\u2011I\u2011E\u2011L\u2011L\u2011E, H\u2011A\u2011R\u2011P\u2011E\u2011R"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like to use your phone number to look up your record?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, my number is 555\u2011236\u20118741.My insurance is Blue Cross Blue Shield.I\u2019m flexible, but next week in the afternoon would be best.Could you let me know what"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you're not sure, let me know, and we can confirm your name and date of birth again."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like to use your phone number to look up your record?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, please use my phone number to look up my record"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you're not sure, we can confirm your name and date of birth again."
+  },
+  {
+    "speaker": "patient",
+    "text": "My name is Danielle Harper, DOB 03/12/1981"
+  },
+  {
+    "speaker": "agent",
+    "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you Would you like me to have someone reach out to help schedule your appointment?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, please have someone reach out to help schedule it"
+  },
+  {
+    "speaker": "agent",
+    "text": "Connecting you to a representative. Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, thank you"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, goodbye"
+  }
+]

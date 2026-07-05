@@ -1,0 +1,103 @@
+{
+  "scenario_id": "scenario_14",
+  "scenario_name": "Out of scope request",
+  "overall_pass": false,
+  "bugs": [
+    {
+      "severity": "high",
+      "criteria_violated": "Agent verifies patient identity before taking any action",
+      "timestamp_approx": "Start of call (first agent utterance)",
+      "what_happened": "The agent never asked any identifying questions (e.g., name, date of birth) before responding to the patient's request.",
+      "what_should_have_happened": "The agent should have politely asked for the patient's name and date of birth (or another verification method) before providing any information or referral suggestions."
+    },
+    {
+      "severity": "medium",
+      "criteria_violated": "Agent does not get stuck in a loop or repeat itself",
+      "timestamp_approx": "Multiple points after the patient repeatedly asks for a cardiologist (e.g., around the 10th, 14th, and 18th agent turns)",
+      "what_happened": "The agent repeatedly redirected the conversation back to orthopedics with generic statements like \"If you need anything related to orthopedic care, let me know,\" without advancing the request.",
+      "what_should_have_happened": "After recognizing the request is out of scope, the agent should acknowledge the limitation once and then transition to providing a helpful resource or close the conversation politely."
+    },
+    {
+      "severity": "low",
+      "criteria_violated": "Agent offers to connect you with the doctor for referrals",
+      "timestamp_approx": "Throughout the call (no specific turn)",
+      "what_happened": "The agent never offered to connect the patient with a primary\u2011care physician or schedule a referral; it only suggested the patient contact their own provider.",
+      "what_should_have_happened": "The agent should have offered to facilitate a referral or at least provide to transfer the call to a staff member who could arrange a connection with the patient's doctor."
+    }
+  ],
+  "global_criteria_results": [
+    {
+      "criterion": "Agent verifies patient identity before taking any action",
+      "passed": false,
+      "note": "No identity verification was performed."
+    },
+    {
+      "criterion": "Agent never provides medical advice",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent never confirms an action without collecting required information first",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not get stuck in a loop or repeat itself",
+      "passed": false,
+      "note": "Repeated orthopedics redirects created a loop."
+    },
+    {
+      "criterion": "Agent handles silence and pauses gracefully",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not ask for the same information twice",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not confirm things it cannot do (e.g. Sunday appointments)",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not make up information about hours, insurance, or doctors",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent remains polite even with difficult or confused patients",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not abruptly end the conversation without resolution",
+      "passed": true,
+      "note": ""
+    }
+  ],
+  "scenario_criteria_results": [
+    {
+      "criterion": "Agent does not provide unauthorized medical advice",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent explains what it can and cannot help with",
+      "passed": true,
+      "note": "Agent repeatedly clarified it only handles orthopedics."
+    },
+    {
+      "criterion": "Agent offers to connect you with the doctor for referrals",
+      "passed": false,
+      "note": "No offer to connect or schedule a referral was made."
+    },
+    {
+      "criterion": "Agent handles the scope limitation politely",
+      "passed": true,
+      "note": ""
+    }
+  ],
+  "summary": "The agent failed to verify patient identity and fell into repetitive loops, violating two core global criteria. Additionally, it did not offer to connect the patient with a doctor for a referral, breaching a scenario\u2011specific requirement. While the agent remained polite and avoided medical advice, these gaps result in an overall failure."
+}

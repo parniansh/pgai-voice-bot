@@ -1,0 +1,114 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "I understand"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopaedics, part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi, I'd like to request a refill for my lisinopril, 10\u202fmg"
+  },
+  {
+    "speaker": "agent",
+    "text": "I see you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, this is Robert"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Robert\u202fJames\u202fMiller, June\u202f12\u202f1964"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, I have your name as Robert Miller and your date of birth as 06/12/1964."
+  },
+  {
+    "speaker": "patient",
+    "text": "That's correct"
+  },
+  {
+    "speaker": "agent",
+    "text": "Is that correct? If so, could you please spell your first and last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "R\u202fO\u202fB\u202fE\u202fR   M\u202fI\u202fL\u202fL\u202fE\u202fR"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like me to look up your record using your phone number?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, pleaseI'd like to refill my lisinopril prescription, 10\u202fmg, pleaseMy last refill was about a month agoCould you tell me how many days supply you need?Thirty days, please"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you're not sure"
+  },
+  {
+    "speaker": "patient",
+    "text": "Thirty days, that's what I need"
+  },
+  {
+    "speaker": "agent",
+    "text": "please tell me the phone number you have on file with us."
+  },
+  {
+    "speaker": "patient",
+    "text": "It's 555\u2011123\u20114567"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your phone number as (555) 123-4567."
+  },
+  {
+    "speaker": "patient",
+    "text": "That's correct"
+  },
+  {
+    "speaker": "agent",
+    "text": "Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's correct"
+  },
+  {
+    "speaker": "agent",
+    "text": "I can't process your refill request right now, but I'll make sure our clinic support team follows up with you."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, thank you. When can I expect someone to follow up?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Connecting you to a representative. Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure, I\u2019ll hold"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Goodbye"
+  }
+]

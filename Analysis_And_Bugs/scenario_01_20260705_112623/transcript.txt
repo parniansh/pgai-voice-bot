@@ -1,0 +1,30 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : That's fine
+AGENT     : Thanks for calling Pivot Point Orthopedics. Part of Pretty Good AI. May I help you today?
+PATIENT   : Hi, I'd like to schedule my first appointment for a general check‑up
+AGENT     : I see you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : No, I'm Danielle. I need to set up a new patient appointment
+AGENT     : Please provide your full name and date of birth.
+PATIENT   : Danielle Harper, March 12, 1981
+AGENT     : Just to confirm, I have your name as Danielle Harper?
+PATIENT   : Yes, that's correct. My DOB is March 12, 1981
+AGENT     : And your date of birth as 03/12/1981.
+PATIENT   : That's right. What's the next step?
+AGENT     : Is that correct? If so, could you please spell your first and last name for me?
+PATIENT   : Sure. D‑A‑N‑I‑E‑L‑L‑E, H‑A‑R‑P‑E‑R
+AGENT     : Go ahead and spell your first and last name, please.
+PATIENT   : D‑A‑N‑I‑E‑L‑L‑E, H‑A‑R‑P‑E‑R
+AGENT     : Would you like to use your phone number to look up your record?
+PATIENT   : Yes, my number is 555‑236‑8741.My insurance is Blue Cross Blue Shield.I’m flexible, but next week in the afternoon would be best.Could you let me know what
+AGENT     : If you're not sure, let me know, and we can confirm your name and date of birth again.
+PATIENT   : Sorry, could you repeat that?
+AGENT     : Would you like to use your phone number to look up your record?
+PATIENT   : Yes, please use my phone number to look up my record
+AGENT     : If you're not sure, we can confirm your name and date of birth again.
+PATIENT   : My name is Danielle Harper, DOB 03/12/1981
+AGENT     : I can't proceed further right now, but I can make sure our clinic support team follows up with you Would you like me to have someone reach out to help schedule your appointment?
+PATIENT   : Yes, please have someone reach out to help schedule it
+AGENT     : Connecting you to a representative. Please wait.
+PATIENT   : Okay, thank you
+AGENT     : Hello. You've reached the Pretty Good AI test line. Goodbye.
+PATIENT   : Okay, goodbye

@@ -1,0 +1,154 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure, that's fine"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi, I\u2019m calling to find out if you accept Blue Cross\u202fBlue Shield PPO. I\u2019d like to confirm that before I schedule an appointment"
+  },
+  {
+    "speaker": "agent",
+    "text": "Pivot Point Orthopedics accepts most insurance plans."
+  },
+  {
+    "speaker": "patient",
+    "text": "Do you specifically accept Blue Cross\u202fBlue Shield PPO?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Including many PPO options, To confirm your specific Blue Cross Blue Shield PPO coverage, I'll need to verify your information. May I get started with that?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure, what information do you need?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I see you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, this is James.No, this is James"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I need your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "James Smith, March 12, 1976"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your name as James Smith, and your date of birth as March twelfth 19 76. Is that correct? If so, please spell your first and last name for me."
+  },
+  {
+    "speaker": "patient",
+    "text": "J A M E S   S M I T H"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like to use your phone number to look up your record?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, go ahead and use my phone number"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, please provide the number you have on file with us."
+  },
+  {
+    "speaker": "patient",
+    "text": "555\u2011123\u20114567"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you're not sure, I can confirm your name and date of birth again. Which would you prefer?"
+  },
+  {
+    "speaker": "patient",
+    "text": "My name and date of birth are correct, you can use those"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your phone number as 8 1 8 4 5 2 1 4 8 0 and your date of birth is 03/12/1976. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your phone number as 8 1 8 4 5 2 1 4 8 0 and your date of birth as 03/12/1976."
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that\u2019s correct. And do you accept Blue Cross\u202fBlue Shield PPO?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's correct"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'm unable to verify your information right now."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, what do I need to do to get it verified?"
+  },
+  {
+    "speaker": "agent",
+    "text": "So I can't confirm your insurance coverage at this moment."
+  },
+  {
+    "speaker": "patient",
+    "text": "I understand. Could you let me know when you\u2019ll be able to check, or should I call back later?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'll connect you to our patient support team for help. Please stay on the line."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, I'll hold"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, I\u2019ll wait"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  }
+]

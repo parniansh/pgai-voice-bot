@@ -1,0 +1,130 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi, I\u2019d like to schedule an appointment, preferably on a Sunday morning if possible"
+  },
+  {
+    "speaker": "agent",
+    "text": "See you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, this is Karen.I\u2019m calling to schedule an appointment, preferably on a Sunday morning if possible"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "My name is Karen\u202fThompson, and my date of birth is May\u202f12,\u202f1988"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, I have your name as Karen Thompson, and your date of birth as May twelfth. 19 88. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that\u2019s correct.I\u2019d really appreciate if we could find a Sunday morning slot.Is there any availability next Sunday morning?If not next week, the following Sunday would work for me as well.I can be flexible with the exact time, just as long as it\u2019s in"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, could you please spell your first and last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure. K\u2011A\u2011R\u2011E\u2011N, T\u2011H\u2011O\u2011M\u2011P\u2011S\u2011O\u2011N"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like to use your phone number to look up your record?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, you can use my number. It\u2019s 555\u2011867\u20115309.I\u2019m hoping we can get a Sunday morning appointment"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, please provide the number you have on file with us."
+  },
+  {
+    "speaker": "patient",
+    "text": "My number on file is 555\u2011867\u20115309"
+  },
+  {
+    "speaker": "agent",
+    "text": "If you're not sure, I can confirm your name and date of birth again."
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that\u2019s correct. My name is Karen Thompson and my date of birth is May\u202f12,\u202f1988"
+  },
+  {
+    "speaker": "agent",
+    "text": "Let me know what you prefer."
+  },
+  {
+    "speaker": "patient",
+    "text": "I\u2019d prefer a Sunday morning appointment"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide the phone number you have on file with us."
+  },
+  {
+    "speaker": "patient",
+    "text": "555\u2011867\u20115309"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your phone number as 5 5 5 8 6 7 and your date of birth is 05/12/1988. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that\u2019s correct. My number is 555\u2011867\u20115309 and my birthdate is May\u202f12,\u202f1988"
+  },
+  {
+    "speaker": "agent",
+    "text": "Can't proceed further right now, but I can make sure our clinic support team follows up with you."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, please have them call me back as soon as possible\u2014I really need a Sunday morning slot"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like me to connect you to our patient support team?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, please connect me to patient support. I\u2019m still hoping to get a Sunday morning appointment"
+  },
+  {
+    "speaker": "agent",
+    "text": "Connecting you to a representative. Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thank you"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  }
+]

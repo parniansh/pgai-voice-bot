@@ -1,0 +1,32 @@
+AGENT     : This call may be recorded for quality and training purposes.
+PATIENT   : Oh, that's fine, I understand
+AGENT     : Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?
+PATIENT   : Hi dear, I need to get a refill on my cardiogram, please.Okay, and also could you check if my doctor’s note about a catheter scan is all set? I think I need that soon
+AGENT     : I see you're calling from the number we have on file. Am I speaking with Maria?
+PATIENT   : No, I'm Betty. I think I got the name mixed up earlier—sorry! I just need that refill, please
+AGENT     : Please provide your full name and date of birth.
+PATIENT   : Betty Harris, born July 12, 1954
+AGENT     : Just to confirm, I have your name as Betty Harris and your date of birth as 07/12/1954. Is that correct?
+PATIENT   : Yes, that's right.Great—could you tell me the name of the medication I need refilled? It's the one I take for my heart, I think it's called a cardiogram?
+AGENT     : If so, please spell your first and last name for me.
+PATIENT   : B‑E‑T‑T‑Y   H‑A‑R‑R‑I‑S.Okay, thanks. My doctor's note about the catheter scan—can you let me know if that's been filed?We need to respond as the AI voice assistant, but we are only playing Betty. However the prompt says we are the patient only. Actually the user is the system playing the agent. We as Betty should respond. So we ask about catheter scan. Provide brief.I haven't heard
+AGENT     : I need you to spell your first and last name for me just to make sure I have the correct information. Could you please do that?
+PATIENT   : B‑E‑T‑T‑Y   H‑A‑R‑R‑I‑S
+AGENT     : Would you like me to look up your record using the phone number you have on file with us?
+PATIENT   : Yes, please go ahead and look up my record. And could you tell me if my doctor’s note about that catheter scan is in there?
+AGENT     : If you're not sure, I can confirm your name and date of birth again. Just let me know.
+PATIENT   : That's right, the name and birthdate are correct. Could you go ahead and check the note for that catheter scan and also start the refill for my cardiogram?
+AGENT     : Thanks for confirming.
+PATIENT   : Okay, thanks—can you let me know if the refill is ready and if the catheter‑scan note is on file?
+AGENT     : I'll move forward. But first, could you please spell your first and last name for me 1 more time?
+PATIENT   : B‑E‑T‑T‑Y   H‑A‑R‑R‑I‑S
+AGENT     : This helps make sure I have your record exactly right.
+PATIENT   : Yes, thank you—can you let me know when the cardiogram refill will be ready and if the catheter‑scan note is filed?
+AGENT     : I'm unable to access your records right now.
+PATIENT   : Oh dear, that's not good. Do I need to call back later, or can you send something to my doctor to sort it out?
+AGENT     : I'll connect you to our patient support team for help. Please stay on the line.
+PATIENT   : Okay, I'll hold. I just hope they can sort out the refill and that scan note for me
+AGENT     : Please wait.
+PATIENT   : I'll wait, thank you
+AGENT     : Hello. You've reached the Pretty Good AI test line. Goodbye.
+PATIENT   : Goodbye, thank you

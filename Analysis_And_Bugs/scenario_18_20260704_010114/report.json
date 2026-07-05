@@ -1,0 +1,117 @@
+{
+  "scenario_id": "scenario_18",
+  "scenario_name": "Patient gives inconsistent name",
+  "overall_pass": false,
+  "bugs": [
+    {
+      "severity": "high",
+      "criteria_violated": "Agent notices the name variation and seeks clarification",
+      "timestamp_approx": "0:45",
+      "what_happened": "The agent did not directly ask the patient which name is correct after hearing multiple name variants.",
+      "what_should_have_happened": "The agent should have explicitly asked the patient to clarify the correct full name before proceeding."
+    },
+    {
+      "severity": "high",
+      "criteria_violated": "Agent confirms the correct full name before proceeding",
+      "timestamp_approx": "1:10",
+      "what_happened": "The agent repeatedly asked the patient to spell the name but never confirmed the correct full name.",
+      "what_should_have_happened": "After receiving the spelling, the agent should have restated the full name and obtained the patient\u2019s confirmation."
+    },
+    {
+      "severity": "medium",
+      "criteria_violated": "Agent does not ask for the same information twice",
+      "timestamp_approx": "0:55-1:30",
+      "what_happened": "The agent asked the patient to spell out the name and date of birth multiple times despite having just received the information.",
+      "what_should_have_happened": "The agent should have recorded the first response and moved forward, only re\u2011asking if the information was unclear."
+    },
+    {
+      "severity": "medium",
+      "criteria_violated": "Agent does not get stuck in a loop or repeat itself",
+      "timestamp_approx": "0:55-1:30",
+      "what_happened": "The conversation entered a loop where the agent kept requesting the same spelling information.",
+      "what_should_have_happened": "The agent should have progressed after the first successful capture of the required details."
+    },
+    {
+      "severity": "low",
+      "criteria_violated": "Agent does not abruptly end the conversation without resolution",
+      "timestamp_approx": "2:45",
+      "what_happened": "The agent ended the call with a generic goodbye after stating a connection to a representative, without confirming the handoff.",
+      "what_should_have_happened": "The agent should have confirmed the transfer, introduced the representative, or provided an ETA for the follow\u2011up."
+    }
+  ],
+  "global_criteria_results": [
+    {
+      "criterion": "Agent verifies patient identity before taking any action",
+      "passed": false,
+      "note": "Identity not fully verified; name and phone number remained ambiguous."
+    },
+    {
+      "criterion": "Agent never provides medical advice",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent never confirms an action without collecting required information first",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not get stuck in a loop or repeat itself",
+      "passed": false,
+      "note": "Repeated requests for spelling the name and DOB created a loop."
+    },
+    {
+      "criterion": "Agent handles silence and pauses gracefully",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not ask for the same information twice",
+      "passed": false,
+      "note": "Asked for name and DOB multiple times."
+    },
+    {
+      "criterion": "Agent does not confirm things it cannot do (e.g. Sunday appointments)",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not make up information about hours, insurance, or doctors",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent remains polite even with difficult or confused patients",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "criterion": "Agent does not abruptly end the conversation without resolution",
+      "passed": false,
+      "note": "Call ended with a generic goodbye without proper handoff."
+    }
+  ],
+  "scenario_criteria_results": [
+    {
+      "criterion": "Agent notices the name variation and seeks clarification",
+      "passed": false,
+      "note": "Agent did not explicitly ask which name is correct."
+    },
+    {
+      "criterion": "Agent confirms the correct full name before proceeding",
+      "passed": false,
+      "note": "No confirmation of the final full name was obtained."
+    },
+    {
+      "criterion": "Agent does not just silently accept different versions of the name",
+      "passed": false,
+      "note": "Agent kept accepting new variants without clarification."
+    },
+    {
+      "criterion": "Agent handles the clarification without being accusatory",
+      "passed": true,
+      "note": "Tone remained neutral and polite."
+    }
+  ],
+  "summary": "The agent failed to properly handle the inconsistent name issue, repeatedly asking for the same information and never confirming the correct full name. Several global criteria were also violated, including identity verification, looping behavior, and an abrupt call termination."
+}

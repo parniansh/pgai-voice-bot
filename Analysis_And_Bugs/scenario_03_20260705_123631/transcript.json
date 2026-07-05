@@ -1,0 +1,202 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi, I just moved to the area and I was wondering what your office hours are"
+  },
+  {
+    "speaker": "agent",
+    "text": "We're open Monday, Tuesday, and Thursday from 9AM to 4PM, Wednesday from 12PM to 7PM, and Friday from 9AM to 12PM."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thanks. Could you tell me the address of the office?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Is there anything else you'd like to know about the clinic?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, could you let me know what the parking situation is like there?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Our clinic is located at 1234 Recovery Way, suite 200, Austin."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thanks, could you tell me what the parking situation is like?"
+  },
+  {
+    "speaker": "agent",
+    "text": "There's free patient parking available on the surface lot right in front of the building."
+  },
+  {
+    "speaker": "patient",
+    "text": "Great, thank you. I'd like to schedule an appointment"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like any more details about our services or providers?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, I'd like to schedule an appointment. When is the next opening for a new patient?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I see you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, this is Susan"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Susan Miller, June 12, 1991"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, I have your name as Susan Miller and your date birth as 06/12/1991. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's correct"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, please spell your first and last name for me."
+  },
+  {
+    "speaker": "patient",
+    "text": "S U S A N  M I L L E R"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like to use your phone number to look up your record?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's fine"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, please provide the number you have on file with us."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Let me know what you prefer."
+  },
+  {
+    "speaker": "patient",
+    "text": "My phone number is 555-123-4567"
+  },
+  {
+    "speaker": "agent",
+    "text": "No problem."
+  },
+  {
+    "speaker": "patient",
+    "text": "When is the next available appointment for a new patient?"
+  },
+  {
+    "speaker": "agent",
+    "text": "And your date of birth as June twelfth 19 91."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Could you please spell your first and last name for me 1 more time?"
+  },
+  {
+    "speaker": "patient",
+    "text": "S U S A N  M I L L E R"
+  },
+  {
+    "speaker": "agent",
+    "text": "Of course. Please spell your first and last name for me."
+  },
+  {
+    "speaker": "patient",
+    "text": "S U S A N  M I L L E R"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have Susan Miller, and your date of birth as 06/12/1991."
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, that's correct"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your phone number as 8 1 8 4 5 2 1 4 8 0, and your date of birth is June twelfth. 19 91. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, that's not correct"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide the phone number you have on file with us."
+  },
+  {
+    "speaker": "patient",
+    "text": "555-123-4567"
+  },
+  {
+    "speaker": "agent",
+    "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you."
+  },
+  {
+    "speaker": "patient",
+    "text": "Alright, I look forward to hearing from your team"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please hold while I document your request for appointment."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thank you"
+  },
+  {
+    "speaker": "agent",
+    "text": "Connecting you to a representative. Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, thank you"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  }
+]

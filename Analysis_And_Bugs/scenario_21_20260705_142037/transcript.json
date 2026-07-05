@@ -1,0 +1,146 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure, that's fine"
+  },
+  {
+    "speaker": "agent",
+    "text": "Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "I have a question about a recent bill I got"
+  },
+  {
+    "speaker": "agent",
+    "text": "So you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, this is Steve.My DOB is March 5, 2002"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name, including your last name, along with your date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Steve Johnson, June\u202f12\u202f2001"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, can you please spell your first and last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "S\u2011T\u2011E\u2011V\u2011E, J\u2011O\u2011H\u2011N\u2011S\u2011O\u2011N.My DOB is September\u202f3\u202f1999"
+  },
+  {
+    "speaker": "agent",
+    "text": "And your date of birth is 06/12/2001. Correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, that's not right. It's July\u202f22\u202f2003"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to make sure I have it correct."
+  },
+  {
+    "speaker": "patient",
+    "text": "My DOB is actually January\u202f14\u202f2000"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please spell your first and last name, and tell me your date of birth 1 more time."
+  },
+  {
+    "speaker": "patient",
+    "text": "S\u2011T\u2011E\u2011V\u2011E, J\u2011O\u2011H\u2011N\u2011S\u2011O\u2011N. My DOB is March\u202f30\u202f2002"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thank you. And can you confirm your date of birth?"
+  },
+  {
+    "speaker": "patient",
+    "text": "That's not correct\u2014my birthday is August\u202f9\u202f2001"
+  },
+  {
+    "speaker": "agent",
+    "text": "Would you like me to look up your record using the phone number you have on file with us?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure, go ahead"
+  },
+  {
+    "speaker": "agent",
+    "text": "If so, please provide that number. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?"
+  },
+  {
+    "speaker": "patient",
+    "text": "You can use the number on file\u2014555\u2011123\u2011"
+  },
+  {
+    "speaker": "agent",
+    "text": "Could you please provide the full 10 digit phone number you have on file? Including the area code?"
+  },
+  {
+    "speaker": "patient",
+    "text": "555\u2011219\u20118743\n\n(And my DOB is still February\u202f2\u202f1998.)"
+  },
+  {
+    "speaker": "agent",
+    "text": "I have your phone number as 5 5 5 2 1 9 8 7 4 3 and your date of birth as 02/02/1998. Is that correct?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, that's not right\u2014my birthday is October\u202f11\u202f2002"
+  },
+  {
+    "speaker": "agent",
+    "text": "I can't access your billing details right now. But I can connect you to our patient support team for help. Would you like me to transfer you?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Sorry, could you repeat that?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'm unable to look up your billing details at the moment."
+  },
+  {
+    "speaker": "patient",
+    "text": "Can you transfer me to someone who can see the bill, please?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I can connect you to our patient support team so they can help. You like to be transferred?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Yes, please transfer me"
+  },
+  {
+    "speaker": "agent",
+    "text": "Connecting you to a representative. Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thanks.You're welcome"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, thanks. Bye"
+  }
+]

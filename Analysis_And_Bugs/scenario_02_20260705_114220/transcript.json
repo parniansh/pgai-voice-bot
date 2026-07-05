@@ -1,0 +1,82 @@
+[
+  {
+    "speaker": "agent",
+    "text": "This call may be recorded for quality and training purposes."
+  },
+  {
+    "speaker": "patient",
+    "text": "Sure, that's fine"
+  },
+  {
+    "speaker": "agent",
+    "text": "Thanks for calling Pivot Point Orthopaedics. Part of Pretty Good AI. How may I help you today?"
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi, this is Robert. I'd like to request a refill of my lisinopril 10\u202fmg, please"
+  },
+  {
+    "speaker": "agent",
+    "text": "See you're calling from the number we have on file. Am I speaking with Maria?"
+  },
+  {
+    "speaker": "patient",
+    "text": "No, it's Robert. I'm calling about a refill"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please provide your full name and date of birth."
+  },
+  {
+    "speaker": "patient",
+    "text": "Robert\u202fJames\u202fMiller, March\u202f12,\u202f1964"
+  },
+  {
+    "speaker": "agent",
+    "text": "Just to confirm, can you please spell your first and last name for me?"
+  },
+  {
+    "speaker": "patient",
+    "text": "R\u2011O\u2011B\u2011E\u2011R   J\u2011A\u2011M\u2011E\u2011S   M\u2011I\u2011L\u2011L\u2011E\u2011R\n\n(Note: No further output needed)"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'm not able to verify your information right now, so I can't process your refund request."
+  },
+  {
+    "speaker": "patient",
+    "text": "I understand\u2014can you let me know what\u2019s missing so I can provide it, or transfer me to someone who can verify my details and handle the refill?"
+  },
+  {
+    "speaker": "agent",
+    "text": "I'll make sure our clinic support team follows up with you."
+  },
+  {
+    "speaker": "patient",
+    "text": "Alright, thanks. When should I expect them to call back?"
+  },
+  {
+    "speaker": "agent",
+    "text": "Please hold while I document this for our team."
+  },
+  {
+    "speaker": "patient",
+    "text": "Thank you"
+  },
+  {
+    "speaker": "agent",
+    "text": "Connecting you to a representative. Please wait."
+  },
+  {
+    "speaker": "patient",
+    "text": "Hi, I'm Robert. I need a refill for my lisinopril 10\u202fmg, please"
+  },
+  {
+    "speaker": "agent",
+    "text": "Hello. You've reached the Pretty Good AI test line. Goodbye."
+  },
+  {
+    "speaker": "patient",
+    "text": "Okay, goodbye"
+  }
+]
